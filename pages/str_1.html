@@ -1,10 +1,13 @@
 <html>
 <head>
 	<neta chaeset="utf-8" />
-	<title>Question 2</title>
+	<title>Question 1</title>
+	
+</head>
+<body>
 	<script type="text/javascript">
-		document.write("Дата рождения Александра Сергеевича Пушкина?");
-		var arrString = new Array("6 июня 1799", "6 июня 1799г.", "6 июня 1799 года", "6.07.1799", "6.7.1799");
+		document.write("Центральная улица Челябинска?");
+		var arrString = new Array("пр.Ленина", "пр. Ленина", "проспект Ленина", "проспект ленина", "Проспект Ленина");
 		function proverka(btnP) {
 			for(var i=0; i<arrString.length; i++) {
 				if(document.Sel1.pole.value == arrString[i]) {
@@ -13,17 +16,12 @@
 				}
 			}
 			if(answer != null) {
-				if(confirm("Молодец! Еще раз?")) {
-					//Переход на следующую страницу, где 'str_1.html' адрес новой страницы
-					location.href='str_1.html';
-				} else {
-					location.href='str_score.html';
-				}
+				// Переход на следующую страницу, где 'str_2.html' адрес новой страницы
+				location.href='pages/str_2.html';
 			}else alert("Провал");
 		}
 	</script>
-</head>
-<body>
+
 	<FORM NAME="Sel1">
 	</br>
 		<INPUT NAME="pole" onBlur="this.value=this.value.toString()" style="width: 300px">
