@@ -1,0 +1,36 @@
+<html> 
+<head>
+	<neta chaeset="utf-8" /> 
+    <title>Untitled</title> 
+</head> 
+  
+<body> 
+  
+<script> 
+  
+    function check(){
+        var fLogin = document.getElementById('login');
+        var fPass = document.getElementById('pass');
+        if (fLogin.value.length<3){
+            alert('Логин не может быть меньше 3-х символов!');
+            return false;
+        }
+        if (fPass.value.length<5){
+            alert('Пароль не может быть меньше 5-ти символов!');
+            return false;
+        }
+        alert('Регистрация завершена!');
+        return true;
+    }
+  
+</script> 
+<form onsubmit="return check()"> 
+Логин: 
+<input type="text" id="login" name="login"/> 
+Пароль: 
+<input type="password" id="pass" name="pass"/> 
+<input type="submit" value="регистрация" name="submit"/> 
+</form> 
+  
+</body> 
+</html>

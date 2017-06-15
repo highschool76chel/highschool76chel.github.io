@@ -1,0 +1,33 @@
+<html>
+<head>
+	<neta chaeset="utf-8" />
+	<title>Question 2</title>
+	<script type="text/javascript">
+		document.write("Дата рождения Александра Сергеевича Пушкина?");
+		var arrString = new Array("6 июня 1799", "6 июня 1799г.", "6 июня 1799 года", "6.07.1799", "6.7.1799");
+		function proverka(btnP) {
+			for(var i=0; i<arrString.length; i++) {
+				if(document.Sel1.pole.value == arrString[i]) {
+					var answer = arrString[i];
+					break;
+				}
+			}
+			if(answer != null) {
+				if(confirm("Молодец! Еще раз?")) {
+					//Переход на следующую страницу, где 'str_1.html' адрес новой страницы
+					location.href='str_1.html';
+				} else {
+					location.href='str_score.html';
+				}
+			}else alert("Провал");
+		}
+	</script>
+</head>
+<body>
+	<FORM NAME="Sel1">
+	</br>
+		<INPUT NAME="pole" onBlur="this.value=this.value.toString()" style="width: 300px">
+	</FORM>
+	<input type="button" name="btn2" value="Ответить" onclick="proverka (this)" />
+</body>
+</html>
